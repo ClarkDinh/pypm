@@ -321,7 +321,7 @@ class AlgoApriori:
 # ===============================================================
 if __name__ == "__main__":
     input_path = "contextPasquier99.txt"
-    output_path = "apriori_output.txt"
+    output_path = "apriori_outputs.txt"
 
     minsup = 0.4
 
