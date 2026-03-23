@@ -57,7 +57,7 @@ The returned pattern sets and associated values (such as support or utility) are
 
 ## Repository Structure
 
-A typical organization of the project is as follows:
+The organization of the project is as follows:
 
 ```text
 pypm/
