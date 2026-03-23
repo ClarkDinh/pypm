@@ -61,7 +61,7 @@ The organization of the project is as follows:
 
 ```text
 pypm/
-├── pypm/                # source code
+├── codes/                # source code
 ├── datasets/            # testing datasets
 ├── examples/            # usage examples / notebooks / scripts
 ├── tests/               # validation and unit tests
