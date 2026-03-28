@@ -3,22 +3,8 @@ import time
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-# Dataset is inside src folder
-SRC_DIR = os.path.join(BASE_DIR, "src")
-
-# Auto-detect dataset inside src
-INPUT_FILE = None
-for f in os.listdir(SRC_DIR):
-    if "context" in f.lower():
-        INPUT_FILE = os.path.join(SRC_DIR, f)
-        break
-
-if INPUT_FILE is None:
-    print("Dataset not found in src folder.")
-    print("Files inside src:", os.listdir(SRC_DIR))
-    exit()
-
-OUTPUT_FILE = os.path.join(BASE_DIR, "#108_output.txt")
+INPUT_FILE = os.path.join(BASE_DIR, "contextHAUIMiner.txt")
+OUTPUT_FILE = os.path.join(BASE_DIR, "outputs.txt")
 
 DELTA = 30   # change threshold here
 
