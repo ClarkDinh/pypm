@@ -6,7 +6,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 INPUT_FILE = os.path.join(BASE_DIR, "contextHAUIMiner.txt")
 OUTPUT_FILE = os.path.join(BASE_DIR, "outputs.txt")
 
-DELTA = 30   # change threshold here
+DELTA = 24   # change threshold here
 
 # =========================
 # DATA STRUCTURES
