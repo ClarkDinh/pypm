@@ -217,9 +217,9 @@ class THUI:
 # -----------------------------
 if __name__ == "__main__":
 
-    input_file = r"c:\Users\acer\Downloads\Naresh-2\Naresh-2\103_THUI\Java\src\DB_Utility.txt"
-    output_file = "103_output.txt"
-    k = 4
+    input_file = "DB_Utility.txt"
+    output_file = "outputs.txt"
+    k = 8
 
     algo = THUI(k)
     algo.run(input_file, output_file)
