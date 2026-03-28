@@ -656,35 +656,30 @@ def compare_outputs(file_a: str, file_b: str) -> bool:
 
 
 # ─────────────────────────────────────────────
-#  CLI
+#  Direct parameters (no argparse)
 # ─────────────────────────────────────────────
 
-if __name__ == '__main__':
-    parser = argparse.ArgumentParser(
-        description='HUIM-AF – High-Utility Itemset Mining with Artificial Fish Swarm')
-    parser.add_argument('--input',       default='DB_Utility.txt',
-                        help='Path to the input database file')
-    parser.add_argument('--output',      default='python_output.txt',
-                        help='Path to write discovered HUIs')
-    parser.add_argument('--min_utility', type=int, default=25,
-                        help='Minimum utility threshold (absolute value)')
-    parser.add_argument('--seed',        type=int, default=0,
-                        help='Random seed for reproducibility (default: 0 to match Java)')
-    parser.add_argument('--compare',     default=None,
-                        help='Path to Java output file to compare against')
-    args = parser.parse_args()
+# ====== SET PARAMETERS HERE ======
+INPUT_PATH = "DB_Utility.txt"
+OUTPUT_PATH = "outputs.txt"
+MIN_UTILITY = 20
+SEED = 0
+COMPARE_PATH = None   # e.g. "output.txt", or None to skip comparison
+# =================================
 
-    # Set random seed if provided
-    if args.seed is not None:
-        set_random_seed(args.seed)
-        print(f"Using random seed: {args.seed}")
+
+if __name__ == '__main__':
+    # Set random seed
+    if SEED is not None:
+        set_random_seed(SEED)
+        print(f"Using random seed: {SEED}")
 
     algo = AlgoHUIM_AF()
-    algo.run_algorithm(args.input, args.output, args.min_utility)
+    algo.run_algorithm(INPUT_PATH, OUTPUT_PATH, MIN_UTILITY)
     algo.print_stats()
 
-    print(f"\nOutput written to: {args.output}")
+    print(f"\nOutput written to: {OUTPUT_PATH}")
 
-    if args.compare:
-        print(f"\nComparing Python output ({args.output}) vs Java output ({args.compare}):")
-        compare_outputs(args.output, args.compare)
+    if COMPARE_PATH:
+        print(f"\nComparing Python output ({OUTPUT_PATH}) vs Java output ({COMPARE_PATH}):")
+        compare_outputs(OUTPUT_PATH, COMPARE_PATH)
