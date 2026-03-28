@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-Single-file Python conversion of SPMF AlgoPHM (PHM / PHM_irregular).
+Single-file Python implementation of SPMF AlgoPHM (PHM / PHM_irregular).
 
 Includes:
 - AlgoPHM
@@ -517,8 +517,8 @@ class AlgoPHM:
 # Main (like MainTestPHM_irregular)
 # -----------------------------
 def main() -> None:
-    input_file = "Java//src//DB_UtilityPerHUIs.txt"
-    output_file = "Java//src//output_py.txt"
+    input_file = "DB_UtilityPerHUIs.txt"
+    output_file = "output_py.txt"
 
     min_utility = 25
     regularityThreshold = 2
