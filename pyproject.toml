@@ -4,10 +4,13 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pypatternminer"
-version = "0.1.0"
+version = "0.1.1"
 description = "Open-source Python library for pattern mining"
 readme = "README.md"
 requires-python = ">=3.10"
 authors = [
   { name = "Tai Dinh" }
 ]
+
+[tool.setuptools.packages.find]
+include = ["pypatternminer*"]
