@@ -77,7 +77,6 @@ def run_tku(input_file, output_file, k):
                 if utility > heap[0][0]:
                     heapq.heappushpop(heap, (utility, combo))
 
-    # 🔥 DO NOT SORT (Java behavior)
     topk = list(heap)
 
     def reorder_like_java(itemset):
